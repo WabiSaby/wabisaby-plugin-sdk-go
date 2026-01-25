@@ -22,7 +22,6 @@ import (
 	"github.com/google/uuid"
 	hashicorp_plugin "github.com/hashicorp/go-plugin"
 	pluginpb "github.com/wabisaby/wabisaby/api/generated/proto/plugin"
-	go_runtime "github.com/wabisaby/wabisaby/pkg/plugin/runtime/go"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 )
@@ -359,13 +358,13 @@ func Serve(plugin Plugin) error {
 	defer server.Close()
 
 	// Create plugin implementation
-	pluginImpl := &go_runtime.PluginGRPC{
+	pluginImpl := &PluginGRPC{
 		Impl: server,
 	}
 
 	// Serve using go-plugin
 	hashicorp_plugin.Serve(&hashicorp_plugin.ServeConfig{
-		HandshakeConfig: go_runtime.HandshakeConfig(),
+		HandshakeConfig: HandshakeConfig(),
 		Plugins: map[string]hashicorp_plugin.Plugin{
 			"plugin": pluginImpl,
 		},
