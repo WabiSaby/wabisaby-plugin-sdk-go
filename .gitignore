@@ -1,0 +1,20 @@
+# Go build cache
+.go/
+go.sum
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Temporary files
+*.tmp
+*.log
+*.out
+
+# Test coverage
+*.coverprofile
+coverage.html
