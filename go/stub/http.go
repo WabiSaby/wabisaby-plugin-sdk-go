@@ -14,12 +14,25 @@ package stub
 import (
 	"context"
 	"fmt"
-	"github.com/wabisaby/wabisaby/pkg/utils/convertion"
+	"math"
 	"time"
 
 	"github.com/google/uuid"
-	pluginpb "github.com/wabisaby/wabisaby/api/generated/proto/plugin"
+	pluginpb "github.com/WabiSaby/WabiSaby-Protos/go/plugin"
 )
+
+// durationToInt32Ms converts a time.Duration to int32 milliseconds.
+// Clamps to int32 max if the duration exceeds the maximum representable milliseconds.
+func durationToInt32Ms(d time.Duration) int32 {
+	ms := d.Milliseconds()
+	if ms > math.MaxInt32 {
+		return math.MaxInt32
+	}
+	if ms < math.MinInt32 {
+		return math.MinInt32
+	}
+	return int32(ms)
+}
 
 // HTTPResponse represents an HTTP response.
 type HTTPResponse struct {
@@ -95,6 +108,6 @@ func (c *HTTPClient) Post(ctx context.Context, url string, headers map[string]st
 
 // PostWithTimeout is a convenience method for POST requests with timeout.
 func (c *HTTPClient) PostWithTimeout(ctx context.Context, url string, headers map[string]string, body []byte, timeout time.Duration) (*HTTPResponse, error) {
-	timeoutMs := convertion.DurationToInt32Ms(timeout)
+	timeoutMs := durationToInt32Ms(timeout)
 	return c.Fetch(ctx, "POST", url, headers, body, timeoutMs)
 }

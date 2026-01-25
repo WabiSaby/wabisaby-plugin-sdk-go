@@ -14,7 +14,7 @@ package sdk
 import (
 	"fmt"
 
-	"github.com/wabisaby/wabisaby/pkg/plugin/sdk/go/stub"
+	"github.com/wabisaby/wabisaby-plugin-sdk/go/stub"
 )
 
 // NotificationType represents the type of notification.

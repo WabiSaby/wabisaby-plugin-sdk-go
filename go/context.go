@@ -15,8 +15,8 @@ import (
 	"context"
 
 	"github.com/google/uuid"
-	pluginpb "github.com/wabisaby/wabisaby/api/generated/proto/plugin"
-	"github.com/wabisaby/wabisaby/pkg/plugin/sdk/go/stub"
+	pluginpb "github.com/WabiSaby/WabiSaby-Protos/go/plugin"
+	"github.com/wabisaby/wabisaby-plugin-sdk/go/stub"
 )
 
 // PluginSession provides execution context for a plugin.

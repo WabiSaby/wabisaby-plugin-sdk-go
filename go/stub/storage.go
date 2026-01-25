@@ -17,7 +17,7 @@ import (
 	"fmt"
 
 	"github.com/google/uuid"
-	pluginpb "github.com/wabisaby/wabisaby/api/generated/proto/plugin"
+	pluginpb "github.com/WabiSaby/WabiSaby-Protos/go/plugin"
 )
 
 // StorageClient provides access to plugin storage (key-value store).
