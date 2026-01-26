@@ -18,7 +18,7 @@ import (
 	"time"
 
 	"github.com/google/uuid"
-	pluginpb "github.com/WabiSaby/WabiSaby-Protos/go/plugin"
+	pluginpb "github.com/wabisaby/wabisaby-protos/go/plugin"
 )
 
 // durationToInt32Ms converts a time.Duration to int32 milliseconds.

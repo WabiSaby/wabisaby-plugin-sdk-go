@@ -15,7 +15,7 @@ import (
 	"context"
 
 	"github.com/hashicorp/go-plugin"
-	pluginpb "github.com/WabiSaby/WabiSaby-Protos/go/plugin"
+	pluginpb "github.com/wabisaby/wabisaby-protos/go/plugin"
 	"google.golang.org/grpc"
 )
 

@@ -17,7 +17,7 @@ import (
 	"fmt"
 
 	"github.com/google/uuid"
-	pluginpb "github.com/WabiSaby/WabiSaby-Protos/go/plugin"
+	pluginpb "github.com/wabisaby/wabisaby-protos/go/plugin"
 )
 
 // QueueItem represents a queue item with song information.
