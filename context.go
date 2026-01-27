@@ -15,7 +15,7 @@ import (
 	"context"
 
 	"github.com/google/uuid"
-	"github.com/wabisaby/wabisaby-plugin-sdk/go/stub"
+	"github.com/wabisaby/wabisaby-plugin-sdk/stub"
 	pluginpb "github.com/wabisaby/wabisaby-protos/go/plugin"
 )
 
