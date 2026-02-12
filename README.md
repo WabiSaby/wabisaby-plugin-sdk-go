@@ -77,7 +77,7 @@ For storage provider plugins:
 ```go
 type StorageProvider interface {
     Plugin
-    UploadHLSFiles(ctx *Context, req *UploadHLSRequest) (string, error)
+    UploadAudio(ctx *Context, req *UploadAudioRequest) (string, error)
     GetFileSizeMB(ctx *Context, cdnURL string) (float64, error)
     DeleteAudio(ctx *Context, cdnURL string) error
 }

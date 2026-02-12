@@ -134,10 +134,9 @@ func NewStorageProviderPlugin() *StorageProviderPlugin {
 	}
 }
 
-// UploadHLSRequest represents a request to upload HLS files.
-type UploadHLSRequest struct {
-	PlaylistPath string
-	SegmentsDir  string
+// UploadAudioRequest represents a request to upload an audio file (FLAC).
+type UploadAudioRequest struct {
+	FilePath     string // Path to the FLAC file
 	BaseFilename string
 }
 
@@ -145,8 +144,8 @@ type UploadHLSRequest struct {
 type StorageProvider interface {
 	Plugin
 
-	// UploadHLSFiles uploads HLS files and returns the CDN URL.
-	UploadHLSFiles(ctx *Context, req *UploadHLSRequest) (string, error)
+	// UploadAudio uploads an audio file (FLAC) and returns the CDN URL.
+	UploadAudio(ctx *Context, req *UploadAudioRequest) (string, error)
 
 	// GetFileSizeMB returns the total size of an audio file in MB.
 	GetFileSizeMB(ctx *Context, cdnURL string) (float64, error)
