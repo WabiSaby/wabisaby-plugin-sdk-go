@@ -3,9 +3,9 @@ module github.com/wabisaby/wabisaby-plugin-sdk
 go 1.24.4
 
 require (
-	github.com/wabisaby/wabisaby-protos v0.0.0
 	github.com/google/uuid v1.6.0
 	github.com/hashicorp/go-plugin v1.6.0
+	github.com/wabisaby/wabisaby-protos-go v0.0.1
 	google.golang.org/grpc v1.78.0
 )
 
@@ -25,6 +25,6 @@ require (
 	google.golang.org/protobuf v1.36.11 // indirect
 )
 
-replace github.com/wabisaby/wabisaby-protos => ../WabiSaby-Protos
+replace github.com/wabisaby/wabisaby-protos-go => ../wabisaby-protos-go
 
 exclude google.golang.org/genproto v0.0.0-20200526211855-cb27e3aa2013

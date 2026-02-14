@@ -16,7 +16,7 @@ import (
 	"fmt"
 
 	"github.com/google/uuid"
-	pluginpb "github.com/wabisaby/wabisaby-protos/go/plugin"
+	pluginpb "github.com/wabisaby/wabisaby-protos-go/go/plugin"
 )
 
 // SecretsClient provides access to encrypted secret storage.

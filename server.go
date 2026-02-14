@@ -21,7 +21,7 @@ import (
 
 	"github.com/google/uuid"
 	hashicorp_plugin "github.com/hashicorp/go-plugin"
-	pluginpb "github.com/wabisaby/wabisaby-protos/go/plugin"
+	pluginpb "github.com/wabisaby/wabisaby-protos-go/go/plugin"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 )

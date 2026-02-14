@@ -17,7 +17,7 @@ import (
 	"fmt"
 
 	"github.com/google/uuid"
-	pluginpb "github.com/wabisaby/wabisaby-protos/go/plugin"
+	pluginpb "github.com/wabisaby/wabisaby-protos-go/go/plugin"
 )
 
 // Song represents a song with metadata.
